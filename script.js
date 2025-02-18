@@ -91,4 +91,5 @@ function guardar(datos){
 }
 
 function cargar() {
-    return localStorage.getItem("lista")}
+    return localStorage.getItem("lista")
+}

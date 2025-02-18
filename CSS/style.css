@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logo {
+    position: absolute;
+    left: 18rem;
+    max-width: 3rem;
+    margin-bottom: 10px; /* Espaciado reducido debajo del logo */
+}
+
+header {
+    position: absolute;
+    top: 10px; /* Ajusta la posición del header más cerca de la parte superior de la pantalla */
+    left: 29rem;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+/* Estilo general del cuerpo */
+body{
+    min-height: 100vh;/* Ajusta al 100% de la ventana del navegador */
+    width: 100%;
+    display: flex;
+    flex-direction: column;/* Coloca los elementos en columna */
+    align-items: center;
+    justify-content: start;/* Asegura que el contenido no esté centrado verticalmente */
+    background: #01e8f9;
+    padding: 50px;/* Agrega márgenes generales */
+}
+
+footer {
+    margin-top: auto; /* Empuja el footer hacia abajo cuando hay poco contenido */
+    padding: 10px;
+    text-align: center;
+    width: 100%; /* Ocupa todo el ancho */
+}
+
+/* Contenedor principal que centra todos los elementos */
+.eventos {
+    display: flex;
+    padding: 30px;
+    flex-direction: column; /* Organiza los contenedores verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 30px; /* Espacio entre el formulario y la lista de eventos */
+}
+
+/* Formulario */
+.Formulario {
+    user-select: none;
+    margin-top: 0px; /* Reduce el espacio entre el formulario y el header */
+    background: #e5ebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px 8px #b4eeee;
+    border: none;
+    padding: 5px; /* Espaciado interno */
+    width: 330px; /* Ajusta al ancho disponible */
+    max-width: 700px; /* Ancho máximo */
+}
+
+/* Inputs del formulario */
+.eventos .Formulario input {
+    width: 250px;
+    height: 35px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+    color: #565e5f;
+    border-radius: 10px;
+    border-color: #61ecf6;
+}
+
+/* Organización interna del formulario */
+.Formulario form {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos verticalmente */
+    gap: 5px; /* Espaciado entre elementos del formulario */
+    align-items: center;
+    margin: 30px;
+}
+
+/* Botón "Agregar evento" */
+#agregar {
+    width: 220px;
+    height: 40px;
+    background-color: #008e98; /* Color de fondo */
+    color: white; /* Color del texto */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    border: 2px solid #3d8b41; /* Borde oscuro */
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#agregar:hover {
+    background-color: #45a049; /* Cambia el color al pasar el mouse */
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4);
+}
+
+#agregar:active {
+    transform: translateY(2px); /* Simula un hundimiento */
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Campo de fecha */
+#fechaEvento {
+    cursor: pointer;
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding-left: 10px; /* Espaciado interno izquierdo */
+}
+
+/* Contenedor de la lista de eventos */
+.listaEventos2 {
+    width: 150%;
+    background: #e5ebeb;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px 8px #b4eeee;
+    max-width: 700px;
+}
+
+/* Cada evento */
+.evento {
+    display: flex;
+    flex-direction: row; /* Elementos en línea horizontal */
+    align-items: center; /* Alineación vertical */
+    gap: 30px; /* Espacio entre los elementos */
+    padding: 15px;
+    background-color: #e5ebeb; /* Fondo */
+    border: 2px solid #61ecf6; /* Borde azul claro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin: 5px 0; /* Espacio entre tarjetas */
+}
+
+.diasFaltantes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px; /* Contenedor reducido */
+    /*height: 70px; /* Altura reducida */
+    font-size: 1.8rem; /* Tamaño del texto grande */
+    font-weight: bold; /* Negrita */
+    color: #008e98; /* Color destacado */
+    text-align: center; /* Texto centrado */
+    padding: 5px; /* Espaciado interno */
+}
+
+.nombreEvento {
+    flex-grow: 2; /* Ocupa más espacio en horizontal */
+    font-size: 1.1rem; /* Tamaño ligeramente más grande */
+    font-weight: bold; /* Negrita */
+    text-align: center; 
+    color: #333; /* Color oscuro */
+    padding: 0 10px; /* Espaciado interno horizontal */
+    word-wrap: break-word; /* Evita desbordes */
+}
+
+/* Contenedor para la fecha del evento */
+.fechaEvento {
+    font-size: 1.1rem; /* Tamaño estándar */
+    color: #333; /* Color letra en este caso numeros de la fecha */
+    white-space: nowrap; /* Evita saltos de línea */
+    text-align: center; /* Alineación centrada */
+    margin-right: 20px; /* Espaciado entre la fecha y el botón */
+}
+
+/* Botón "Eliminar" */
+.eliminar {
+    height: 40px;
+    background-color: #ff6b6b; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 5px 15px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de la letra aumentado */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cursor de mano */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eliminar:hover {
+    background-color: #45a049; /* Color más intenso al pasar el mouse */
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4);
+}
